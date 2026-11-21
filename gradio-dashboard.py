@@ -196,8 +196,8 @@ with gr.Blocks() as dashboard:
 if __name__ == "__main__":
     dashboard.launch(
         theme=gr.themes.Glass(),
-        server_name="127.0.0.1",
-        server_port=7860,
-        share=True,
-        debug=True
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 10000)),
+        share=False,
+        debug=False
     )
